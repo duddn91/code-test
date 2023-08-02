@@ -1,4 +1,4 @@
-package com.daily.codetest.day1;
+package com.daily.codetest.days;
 
 
 import java.util.*;

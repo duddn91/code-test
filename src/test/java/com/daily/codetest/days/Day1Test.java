@@ -1,4 +1,4 @@
-package com.daily.codetest.day1;
+package com.daily.codetest.days;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -24,7 +24,7 @@ class Day1Test {
 	public static String str2 = "e=m*c^2";
 
 	@Test
-	public void 자카드_유사도() {
+	void 자카드_유사도() {
 		char[] charArray1 = str1.toCharArray();
 		char[] charArray2 = str2.toCharArray();
 		List<String> strList1 = new ArrayList<>();
@@ -66,9 +66,6 @@ class Day1Test {
 	private void split(char[] charArray, List<String> strList) {
 		Pattern pattern = Pattern.compile("^[ㄱ-ㅎㅏ-ㅣ가-힣a-zA-Z0-9]*$");
 		for (int i = 0; i < charArray.length - 1; i++) {
-			if (i == charArray.length) {
-				break;
-			}
 			String str = String.valueOf(charArray[i]) + charArray[i + 1];
 
 			Matcher matcher = pattern.matcher(str);
